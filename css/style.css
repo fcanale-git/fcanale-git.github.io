@@ -1,0 +1,130 @@
+/* Reset básico */
+body, h1, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d3d3d3;
+    margin: 0;
+}
+
+/* Barra superior */
+.barra-superior {
+    background-color: beige;
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.barra-superior .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.barra-superior .menu ul li {
+    border: 1px solid #ccc;
+    background-color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.barra-superior .menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.barra-superior .menu ul li a.active {
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.barra-superior .menu ul li:hover {
+    background-color: #f0e6cc;
+}
+
+/* Contenido principal */
+main {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contenedor de botones */
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none; /* Quita el subrayado */
+    color: white;
+    background-color: #333; /* Fondo oscuro */
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para los botones */
+.boton:hover {
+    background-color: #555; /* Cambia el fondo al pasar el mouse */
+}
+
+.boton {
+    background-color: #007BFF;
+}
+.boton:hover {
+    background-color: #0056b3;
+}

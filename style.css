@@ -1,32 +1,58 @@
+/* Reset básico */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Elimina viñetas */
+    box-sizing: border-box;
+}
+
+/* Estilo general */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+}
+
+/* Barra superior */
+.barra-superior {
+    background-color: beige; /* Fondo de la barra */
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc; /* Línea inferior de la barra */
+}
+
+/* Menú */
+.barra-superior .menu ul {
+    display: flex; /* Coloca los elementos en fila */
+    justify-content: center; /* Centra las columnas */
+    align-items: center; /* Alineación vertical */
+    gap: 10px; /* Espacio entre columnas */
+    margin: 0 auto;
     padding: 0;
 }
 
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    background-color: #333;
+.barra-superior .menu ul li {
+    border: 1px solid #ccc; /* Borde de las columnas */
+    background-color: white; /* Fondo blanco dentro de las columnas */
+    text-align: center;
+    padding: 10px 20px; /* Espaciado dentro de cada columna */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-header nav ul li {
-    margin: 0;
-    padding: 10px 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-header nav ul li a.active {
+.barra-superior .menu ul li a {
+    text-decoration: none; /* Quita subrayado */
+    color: black;
+    font-size: 1rem;
     font-weight: bold;
-    color: yellow;
+    display: block; /* Ocupa toda la columna */
 }
 
+/* Hover: Cambia el color de fondo y el borde */
+.barra-superior .menu ul li:hover {
+    background-color: #f0e6cc; /* Beige más claro */
+    border-color: #aaa; /* Cambia el color del borde */
+}
+
+/* Contenido principal */
 main {
+    margin-top: 60px; /* Ajuste para que no se solape con la barra */
     padding: 20px;
 }

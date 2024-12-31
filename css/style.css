@@ -1,97 +1,61 @@
 /* Reset básico */
-body, h1, p, ul, li, form {
+body, h1, p, ul, li {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none; /* Elimina viñetas */
     box-sizing: border-box;
 }
 
-/* Fondo general */
+/* Estilo general */
 body {
     font-family: Arial, sans-serif;
-    background-color: #d3d3d3;
     margin: 0;
 }
 
-/* Barra superior */
+/* Barra superior con degradado violeta y azul */
 .barra-superior {
-    background-color: beige;
+    background: linear-gradient(90deg, #8a2be2, #5d5df8); /* Degradado de violeta a azul */
     padding: 10px 0;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #333; /* Línea inferior */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
+/* Menú */
 .barra-superior .menu ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* Coloca los elementos en fila */
+    justify-content: center; /* Centra las columnas */
+    align-items: center; /* Alineación vertical */
+    gap: 10px; /* Espacio entre columnas */
+    margin: 0 auto;
     padding: 0;
 }
 
 .barra-superior .menu ul li {
-    border: 1px solid #ccc;
-    background-color: white;
+    border: none; /* Sin bordes individuales */
     text-align: center;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    padding: 0; /* Ajustado */
 }
 
+/* Estilos de los enlaces en la barra */
 .barra-superior .menu ul li a {
-    text-decoration: none;
-    color: black;
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
     font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
 }
 
-.barra-superior .menu ul li a.active {
-    color: #fff;
-    background-color: #333;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
-.barra-superior .menu ul li:hover {
-    background-color: #f0e6cc;
+/* Hover para los enlaces */
+.barra-superior .menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco translúcido */
 }
 
 /* Contenido principal */
 main {
-    margin-top: 20px;
+    margin-top: 60px; /* Ajuste para que no se solape con la barra */
     padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Formulario de contacto */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-form label {
-    font-weight: bold;
-}
-
-form input, form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form button {
-    padding: 10px;
-    border: none;
-    background-color: #333;
-    color: white;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 /* Contenedor de botones */
@@ -99,7 +63,7 @@ form button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espacio entre los botones */
+    gap: 20px; /* Espacio entre botones */
     margin-top: 20px;
 }
 
@@ -107,7 +71,7 @@ form button {
 .boton {
     display: inline-block;
     padding: 10px 20px;
-    text-decoration: none; /* Quita el subrayado */
+    text-decoration: none;
     color: white;
     background-color: #333; /* Fondo oscuro */
     border-radius: 5px;
@@ -120,11 +84,4 @@ form button {
 /* Hover para los botones */
 .boton:hover {
     background-color: #555; /* Cambia el fondo al pasar el mouse */
-}
-
-.boton {
-    background-color: #007BFF;
-}
-.boton:hover {
-    background-color: #0056b3;
 }

@@ -1,20 +1,22 @@
-/* Reset básico */
-body, h1, p, ul, li {
+/* Reset CSS */
+body, h1, p, ul, li, a {
     margin: 0;
     padding: 0;
-    list-style: none; /* Elimina viñetas */
+    list-style: none; /* Elimina punteos */
+    text-decoration: none; /* Sin subrayados en enlaces */
     box-sizing: border-box;
 }
 
 /* Estilo general */
 body {
     font-family: Arial, sans-serif;
+    color: #333; /* Color del texto */
     margin: 0;
 }
 
-/* Barra superior con degradado violeta y azul */
+/* Barra superior */
 .barra-superior {
-    background: linear-gradient(90deg, #8a2be2, #5d5df8); /* Degradado de violeta a azul */
+    background: linear-gradient(90deg, #8a2be2, #6a5de8, #5d5df8); /* Gradiente violeta a azul */
     padding: 10px 0;
     border-bottom: 2px solid #333; /* Línea inferior */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
@@ -22,28 +24,20 @@ body {
 
 /* Menú */
 .barra-superior .menu ul {
-    display: flex; /* Coloca los elementos en fila */
-    justify-content: center; /* Centra las columnas */
-    align-items: center; /* Alineación vertical */
-    gap: 10px; /* Espacio entre columnas */
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     padding: 0;
+    margin: 0;
 }
 
-.barra-superior .menu ul li {
-    border: none; /* Sin bordes individuales */
-    text-align: center;
-    padding: 0; /* Ajustado */
-}
-
-/* Estilos de los enlaces en la barra */
 .barra-superior .menu ul li a {
     color: white; /* Texto blanco */
-    text-decoration: none; /* Sin subrayado */
     font-weight: bold;
     font-size: 1rem;
     padding: 10px 15px;
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
@@ -52,13 +46,7 @@ body {
     background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco translúcido */
 }
 
-/* Contenido principal */
-main {
-    margin-top: 60px; /* Ajuste para que no se solape con la barra */
-    padding: 20px;
-}
-
-/* Contenedor de botones */
+/* Botones */
 .botones {
     display: flex;
     justify-content: center;
@@ -67,14 +55,13 @@ main {
     margin-top: 20px;
 }
 
-/* Botones */
 .boton {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    color: white;
+    color: white; /* Texto blanco */
     background-color: #333; /* Fondo oscuro */
-    border-radius: 5px;
+    border-radius: 5px; /* Bordes redondeados */
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -84,4 +71,23 @@ main {
 /* Hover para los botones */
 .boton:hover {
     background-color: #555; /* Cambia el fondo al pasar el mouse */
+}
+
+/* Barra del Logo */
+.barra-logo {
+    background-color: #8a2be2; /* Fondo violeta sólido */
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Centra el logo verticalmente */
+    height: 50px; /* Altura fija de la barra */
+    padding: 0 20px;
+    overflow: hidden; /* Asegura que nada sobresalga de la barra */
+}
+
+/* Imagen del Logo */
+.barra-logo .logo img {
+    height: 100%; /* La imagen ocupa toda la altura de la barra */
+    width: auto; /* Mantén la proporción original de la imagen */
+    max-height: 50px; /* Asegúrate de que no supere la altura de la barra */
+    object-fit: contain; /* Ajusta la imagen dentro de los límites */
 }

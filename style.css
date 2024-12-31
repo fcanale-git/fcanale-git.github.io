@@ -56,3 +56,31 @@ main {
     margin-top: 60px; /* Ajuste para que no se solape con la barra */
     padding: 20px;
 }
+
+/* Contenedor de botones */
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre botones */
+    margin-top: 20px;
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #333; /* Fondo oscuro */
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para los botones */
+.boton:hover {
+    background-color: #555; /* Cambia el fondo al pasar el mouse */
+}
